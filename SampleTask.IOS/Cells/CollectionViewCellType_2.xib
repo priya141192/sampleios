@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="CollectionViewCellType_2">
+            <rect key="frame" x="0.0" y="0.0" width="468" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="468" height="183"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFf-n9-z9U">
+                        <rect key="frame" x="2" y="2" width="464" height="179"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vds-cP-HQl">
+                                <rect key="frame" x="60" y="2" width="110" height="175"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yBK-Qp-BKN">
+                                <rect key="frame" x="228" y="8" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Vds-cP-HQl" secondAttribute="bottom" constant="2" id="KE5-ru-3sN"/>
+                            <constraint firstItem="Vds-cP-HQl" firstAttribute="top" secondItem="PFf-n9-z9U" secondAttribute="top" constant="2" id="dLR-hy-wXa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="PFf-n9-z9U" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="2" id="2Wl-eb-8rc"/>
+                <constraint firstAttribute="bottom" secondItem="PFf-n9-z9U" secondAttribute="bottom" constant="2" id="AKx-gG-1qy"/>
+                <constraint firstAttribute="trailing" secondItem="PFf-n9-z9U" secondAttribute="trailing" constant="2" id="HtE-Ib-W1f"/>
+                <constraint firstItem="PFf-n9-z9U" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="2" id="beq-8n-gET"/>
+            </constraints>
+            <size key="customSize" width="468" height="183"/>
+            <point key="canvasLocation" x="433.33333333333337" y="-51.766304347826093"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
