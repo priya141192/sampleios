@@ -166,6 +166,7 @@
         <Compile Include="DataSources\CollectionViewType_2_Source.cs" />
         <Compile Include="Views\MainDashboardCollectionView.cs" />
         <Compile Include="Dto\DashboardEntityDto.cs" />
+        <Compile Include="Dto\CustomerDto.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
