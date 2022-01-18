@@ -73,6 +73,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-2N-ypI">
                                         <rect key="frame" x="110" y="88" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="lblCategory"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -80,6 +81,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gl-4a-y3O">
                                         <rect key="frame" x="110" y="112" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="lblReviews"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -117,17 +119,10 @@
                                     <constraint firstAttribute="width" constant="70" id="jpV-f0-5wd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaS-eT-qlN">
-                                <rect key="frame" x="99" y="8" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggF-hO-QX4">
                                 <rect key="frame" x="99" y="37" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="lblTestmon"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lblTestMon"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,8 +147,15 @@
             </constraints>
             <size key="customSize" width="578" height="242"/>
             <connections>
+                <outlet property="ImgCust" destination="T7w-DY-cEl" id="Ch4-45-sp2"/>
+                <outlet property="ImgProfile" destination="SiY-T5-b44" id="u2w-aV-qEB"/>
+                <outlet property="lblCategory" destination="h5H-FL-PLZ" id="HlV-PA-sqb"/>
                 <outlet property="lblCustAge" destination="zw4-Nu-BNq" id="Qjk-tI-x8v"/>
-                <outlet property="lblTestmon" destination="ggF-hO-QX4" id="hdu-nK-gBU"/>
+                <outlet property="lblCustName" destination="BoQ-mv-FO5" id="2sD-5C-NzF"/>
+                <outlet property="lblDays" destination="h5H-FL-PLZ" id="YQk-4f-64d"/>
+                <outlet property="lblName" destination="zXY-Rh-hww" id="U58-xR-J5I"/>
+                <outlet property="lblReviews" destination="6Gl-4a-y3O" id="fBg-FI-Xwr"/>
+                <outlet property="lblTestMon" destination="ggF-hO-QX4" id="1Wl-hv-hEa"/>
             </connections>
             <point key="canvasLocation" x="231.8840579710145" y="3.2608695652173916"/>
         </collectionViewCell>

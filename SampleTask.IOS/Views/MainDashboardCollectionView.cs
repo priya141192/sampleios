@@ -28,8 +28,8 @@ namespace SampleTask.IOS.Views
 		{
 			base.AwakeFromNib();
 
-			// Initialize
-			//DataSource = new CollectionViewType_1_Source(this);
+            // Initialize
+            //DataSource = new CollectionViewType_1_Source(this);
 			//Delegate = new WaterfallCollectionDelegate(this);
 		}
 		#endregion

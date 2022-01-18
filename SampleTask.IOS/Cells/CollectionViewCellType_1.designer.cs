@@ -13,19 +13,37 @@ namespace SampleTask.IOS.Cells
 	partial class CollectionViewCellType_1
 	{
 		[Outlet]
+		UIKit.UIImageView ImgCust { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView ImgProfile { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblCategory { get; set; }
+
+		[Outlet]
 		UIKit.UILabel lblCustAge { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lblCustName { get; set; }
 
 		[Outlet]
-		UIKit.UILabel lblTestmon { get; set; }
+		UIKit.UILabel lblDays { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblName { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblReviews { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblTestMon { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblTestmon != null) {
-				lblTestmon.Dispose ();
-				lblTestmon = null;
+			if (lblCustAge != null) {
+				lblCustAge.Dispose ();
+				lblCustAge = null;
 			}
 
 			if (lblCustName != null) {
@@ -33,9 +51,39 @@ namespace SampleTask.IOS.Cells
 				lblCustName = null;
 			}
 
-			if (lblCustAge != null) {
-				lblCustAge.Dispose ();
-				lblCustAge = null;
+			if (ImgProfile != null) {
+				ImgProfile.Dispose ();
+				ImgProfile = null;
+			}
+
+			if (lblName != null) {
+				lblName.Dispose ();
+				lblName = null;
+			}
+
+			if (lblCategory != null) {
+				lblCategory.Dispose ();
+				lblCategory = null;
+			}
+
+			if (lblReviews != null) {
+				lblReviews.Dispose ();
+				lblReviews = null;
+			}
+
+			if (ImgCust != null) {
+				ImgCust.Dispose ();
+				ImgCust = null;
+			}
+
+			if (lblTestMon != null) {
+				lblTestMon.Dispose ();
+				lblTestMon = null;
+			}
+
+			if (lblDays != null) {
+				lblDays.Dispose ();
+				lblDays = null;
 			}
 		}
 	}

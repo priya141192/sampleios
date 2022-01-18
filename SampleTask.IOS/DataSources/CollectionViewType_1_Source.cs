@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Foundation;
 using SampleTask.IOS.Cells;
+using SampleTask.IOS.Dto;
 using SampleTask.IOS.Views;
 using UIKit;
 
@@ -9,61 +10,60 @@ namespace SampleTask.IOS.DataSources
 {
     public class CollectionViewType_1_Source : UICollectionViewSource
     {
+        private MainDashboardCollectionView mainDashboardCollectionView;
         #region Computed Properties
         public MainDashboardCollectionView CollectionView { get; set; }
-        public List<int> Numbers { get; set; } = new List<int>();
+        public List<CustomerDto> CustomerList { get; set; } = new List<CustomerDto>();
         #endregion
 
         #region Constructors
-        //public CollectionViewType_1_Source(MainDashboardCollectionView collectionView)
-        //{
-        //    // Initialize
-        //    CollectionView = collectionView;
-
-        //    // Init numbers collection
-        //    for (int n = 0; n < 20; ++n)
-        //    {
-        //        Numbers.Add(n);
-        //    }
-        //}
-
         public CollectionViewType_1_Source()
         {
-            //CollectionView = collectionView;
+            CustomerList = new List<CustomerDto>
+            {
+                new CustomerDto
+                {
+                    CustomerName = "Rohit",
+                    CustomerAge = "29",
+                    TestName = "Dr. qwerty",
+                    TestMon = "qwertyuio",
+                    TestImage = "https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561__480.png",
+                    Days = "26 Days ago",
 
-            //// Init numbers collection
-            //for (int n = 0; n < 20; ++n)
-            //{
-            //    Numbers.Add(n);
-            //}
 
-           
+                },
+                new CustomerDto
+                {
+                    CustomerName = "Priya",
+                    CustomerAge = "29",
+                    TestName = "Dr. AbcdEf",
+                    TestMon = "asdfghjkl",
+                    TestImage = "https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561__480.png",
+                    Days = "1 year ago"
+                },
+            };
+        }
+
+        public CollectionViewType_1_Source(MainDashboardCollectionView mainDashboardCollectionView)
+        {
+            this.mainDashboardCollectionView = mainDashboardCollectionView;
         }
         #endregion
         public override nint NumberOfSections(UICollectionView collectionView)
         {
-            // We only have one section
             return 1;
         }
 
         public override nint GetItemsCount(UICollectionView collectionView, nint section)
         {
-            // Return the number of items
-            return 5;
+            return CustomerList.Count;
         }
 
         public override UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)
         {
             var cell = collectionView.DequeueReusableCell("CellType1", indexPath) as CollectionViewCellType_1;
-
-            //cell.Title = Numbers[(int)indexPath.Item].ToString();
-            var employees = new EmployeeModel
-            {
-                header = "A",
-                option = "a",
-                content = "aa",
-            };
-            cell.UpdateCell(employees);
+            var entity = CustomerList[indexPath.Row];
+            cell.UpdateCell(entity);
             return cell;
         }
     }

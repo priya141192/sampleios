@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Foundation;
+using SampleTask.IOS.Dto;
 using UIKit;
 
 namespace SampleTask.IOS.Cells
@@ -20,10 +21,14 @@ namespace SampleTask.IOS.Cells
             // Note: this .ctor should not contain any initialization logic.
         }
 
-        internal void UpdateCell(EmployeeModel student)
+        internal void UpdateCell(CustomerDto customer)
         {
-            //.Text = student.header;
-            //lblOptions.Text = student.option;
+            lblCustName.Text = customer.CustomerName;
+            lblCustAge.Text = customer.CustomerAge;
+            lblTestMon.Text = customer.TestMon;
+            lblDays.Text = customer.Days;
+            ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
+            lblName.Text = customer.TestName;
         }
     }
 }

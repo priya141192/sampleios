@@ -168,5 +168,8 @@
         <Compile Include="Dto\DashboardEntityDto.cs" />
         <Compile Include="Dto\CustomerDto.cs" />
     </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\ImgCustomer.jpg" />
+    </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
