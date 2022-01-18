@@ -23,9 +23,9 @@ namespace SampleTask.IOS.Cells
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblHeader != null) {
-				lblHeader.Dispose ();
-				lblHeader = null;
+			if (dashboardcollectioncell != null) {
+				dashboardcollectioncell.Dispose ();
+				dashboardcollectioncell = null;
 			}
 
 			if (lblOptions != null) {
@@ -33,9 +33,9 @@ namespace SampleTask.IOS.Cells
 				lblOptions = null;
 			}
 
-			if (dashboardcollectioncell != null) {
-				dashboardcollectioncell.Dispose ();
-				dashboardcollectioncell = null;
+			if (lblHeader != null) {
+				lblHeader.Dispose ();
+				lblHeader = null;
 			}
 		}
 	}

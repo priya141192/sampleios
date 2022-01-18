@@ -18,7 +18,6 @@ namespace SampleTask.IOS.Cells
 
         protected CollectionViewCellType_1(IntPtr handle) : base(handle)
         {
-            // Note: this .ctor should not contain any initialization logic.
         }
 
         internal void UpdateCell(CustomerDto customer)
@@ -28,7 +27,19 @@ namespace SampleTask.IOS.Cells
             lblTestMon.Text = customer.TestMon;
             lblDays.Text = customer.Days;
             ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
+            ImgProfile.Image = UIImage.FromBundle("ImgTest.jpg");
             lblName.Text = customer.TestName;
+            lblCategory.Text = customer.TestCategory;
+            lblReviews.Text = customer.TestReviews;
+        }
+
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+            ImgProfile.Layer.CornerRadius = 10;
+            ImgCust.Layer.CornerRadius = 10;
+            ImgProfile.Layer.MasksToBounds = true;
+            ImgCust.Layer.MasksToBounds = true;
         }
     }
 }

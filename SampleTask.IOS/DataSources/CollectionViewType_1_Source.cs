@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoreGraphics;
 using Foundation;
 using SampleTask.IOS.Cells;
 using SampleTask.IOS.Dto;
@@ -24,24 +25,28 @@ namespace SampleTask.IOS.DataSources
                 new CustomerDto
                 {
                     CustomerName = "Rohit",
-                    CustomerAge = "29",
-                    TestName = "Dr. qwerty",
-                    TestMon = "qwertyuio",
-                    TestImage = "https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561__480.png",
+                    CustomerAge = "29 Years",
+                    TestName = "Dr. Nada Nada",
+                    TestMon = "Test",
                     Days = "26 Days ago",
+                    TestCategory = "Internal Medicine",
+                    TestReviews = "401 Reviews",
 
 
                 },
                 new CustomerDto
                 {
                     CustomerName = "Priya",
-                    CustomerAge = "29",
-                    TestName = "Dr. AbcdEf",
-                    TestMon = "asdfghjkl",
-                    TestImage = "https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561__480.png",
-                    Days = "1 year ago"
+                    CustomerAge = "29 Years",
+                    TestName = "Dr. Mohammed Arif",
+                    TestMon = "asdfghjkl qwertyui qwertyui",
+                    Days = "1 year ago",
+                    TestCategory = "Ayurved Medicine",
+                    TestReviews = "800 Reviews",
+
                 },
             };
+
         }
 
         public CollectionViewType_1_Source(MainDashboardCollectionView mainDashboardCollectionView)
@@ -62,6 +67,10 @@ namespace SampleTask.IOS.DataSources
         public override UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)
         {
             var cell = collectionView.DequeueReusableCell("CellType1", indexPath) as CollectionViewCellType_1;
+            cell.Layer.BorderWidth = 1.0f;
+            cell.Layer.BorderColor = UIColor.LightGray.CGColor;
+            cell.Layer.MasksToBounds = true;
+            cell.Layer.CornerRadius = 10;
             var entity = CustomerList[indexPath.Row];
             cell.UpdateCell(entity);
             return cell;

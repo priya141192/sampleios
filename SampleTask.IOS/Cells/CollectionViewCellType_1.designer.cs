@@ -41,6 +41,21 @@ namespace SampleTask.IOS.Cells
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ImgCust != null) {
+				ImgCust.Dispose ();
+				ImgCust = null;
+			}
+
+			if (ImgProfile != null) {
+				ImgProfile.Dispose ();
+				ImgProfile = null;
+			}
+
+			if (lblCategory != null) {
+				lblCategory.Dispose ();
+				lblCategory = null;
+			}
+
 			if (lblCustAge != null) {
 				lblCustAge.Dispose ();
 				lblCustAge = null;
@@ -51,9 +66,9 @@ namespace SampleTask.IOS.Cells
 				lblCustName = null;
 			}
 
-			if (ImgProfile != null) {
-				ImgProfile.Dispose ();
-				ImgProfile = null;
+			if (lblDays != null) {
+				lblDays.Dispose ();
+				lblDays = null;
 			}
 
 			if (lblName != null) {
@@ -61,29 +76,14 @@ namespace SampleTask.IOS.Cells
 				lblName = null;
 			}
 
-			if (lblCategory != null) {
-				lblCategory.Dispose ();
-				lblCategory = null;
-			}
-
 			if (lblReviews != null) {
 				lblReviews.Dispose ();
 				lblReviews = null;
 			}
 
-			if (ImgCust != null) {
-				ImgCust.Dispose ();
-				ImgCust = null;
-			}
-
 			if (lblTestMon != null) {
 				lblTestMon.Dispose ();
 				lblTestMon = null;
-			}
-
-			if (lblDays != null) {
-				lblDays.Dispose ();
-				lblDays = null;
 			}
 		}
 	}

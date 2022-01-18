@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="maindashboardtable" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zNm-cZ-UXQ">
-                    <rect key="frame" x="20" y="60" width="374" height="676"/>
+                    <rect key="frame" x="20" y="0.0" width="374" height="736"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                 </tableView>
@@ -36,7 +36,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="zNm-cZ-UXQ" secondAttribute="trailing" constant="20" symbolic="YES" id="7Nw-dJ-ylV"/>
-                <constraint firstItem="zNm-cZ-UXQ" firstAttribute="top" secondItem="2" secondAttribute="top" constant="60" id="HCM-6c-xKM"/>
+                <constraint firstItem="zNm-cZ-UXQ" firstAttribute="top" secondItem="2" secondAttribute="top" id="HCM-6c-xKM"/>
                 <constraint firstAttribute="bottom" secondItem="zNm-cZ-UXQ" secondAttribute="bottom" id="NQ7-hj-gfY"/>
                 <constraint firstItem="zNm-cZ-UXQ" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" symbolic="YES" id="sIo-b7-0Mm"/>
             </constraints>

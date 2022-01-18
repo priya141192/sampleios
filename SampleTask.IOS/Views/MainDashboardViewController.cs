@@ -22,15 +22,16 @@ namespace SampleTask.IOS.Views
             {
                 new DashboardEntityDto
                 {
-                    HeaderText = "Our Happy Customers",Option = "See All",IsOptionVisible=false,
+                    HeaderText = "Our Happy Customers",Option = "",IsOptionVisible=false,
                 },
                 new DashboardEntityDto
                 {
-                    HeaderText = "Doctors Accepting MidGulf Insurance",Option = "See All",IsOptionVisible=true,
+                    HeaderText = "Doctors Accepting MidGulf Insurance",Option = "",IsOptionVisible=true,
                 }
             };
             maindashboardtable.RegisterNibForCellReuse(UINib.FromName("MainDashboardViewCell", null), "dashboardCell");
             maindashboardtable.Source = new MainDashboardDataSource(employees);
+            maindashboardtable.ContentInset = new UIEdgeInsets(40, 0, 0, 0);
             maindashboardtable.EstimatedRowHeight = 500f;
         }
 

@@ -14,5 +14,7 @@ namespace SampleTask.IOS.Dto
         public string Days { get; set; }
         public string TestName { get; set; }
         public string TestMon { get; set; }
+        public string TestCategory { get; set; }
+        public string TestReviews { get; set; }
     }
 }
