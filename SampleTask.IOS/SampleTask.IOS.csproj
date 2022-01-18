@@ -122,6 +122,7 @@
         <Folder Include="Views\" />
         <Folder Include="Cells\" />
         <Folder Include="DataSources\" />
+        <Folder Include="Dto\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -164,6 +165,7 @@
         <Compile Include="DataSources\CollectionViewType_1_Source.cs" />
         <Compile Include="DataSources\CollectionViewType_2_Source.cs" />
         <Compile Include="Views\MainDashboardCollectionView.cs" />
+        <Compile Include="Dto\DashboardEntityDto.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

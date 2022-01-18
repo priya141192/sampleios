@@ -2,6 +2,7 @@
 
 using Foundation;
 using SampleTask.IOS.DataSources;
+using SampleTask.IOS.Dto;
 using UIKit;
 
 namespace SampleTask.IOS.Cells
@@ -22,10 +23,10 @@ namespace SampleTask.IOS.Cells
             
         }
 
-        internal void UpdateCell(EmployeeModel student)
+        internal void UpdateCell(DashboardEntityDto entity)
         {
-            lblHeader.Text = student.header;
-            lblOptions.Text = student.option;
+            lblHeader.Text = entity.HeaderText;
+            lblOptions.Text = entity.Option;
         }
 
         public override void AwakeFromNib()

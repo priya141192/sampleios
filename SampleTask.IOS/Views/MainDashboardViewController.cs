@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using Foundation;
 using SampleTask.IOS.DataSources;
+using SampleTask.IOS.Dto;
 using UIKit;
 
 namespace SampleTask.IOS.Views
 {
     public partial class MainDashboardViewController : UIViewController
     {
-        List<EmployeeModel>  employees = new List<EmployeeModel>();
+        List<DashboardEntityDto>  employees = new List<DashboardEntityDto>();
         public MainDashboardViewController() : base("MainDashboardViewController", null)
         {
         }
@@ -17,15 +18,15 @@ namespace SampleTask.IOS.Views
         {
             base.ViewDidLoad();
 
-            employees = new List<EmployeeModel>
+            employees = new List<DashboardEntityDto>
             {
-                new EmployeeModel
+                new DashboardEntityDto
                 {
-                    header = "A",option = "a",content="aa",
+                    HeaderText = "Our Happy Customers",Option = "See All",IsOptionVisible=false,
                 },
-                new EmployeeModel
+                new DashboardEntityDto
                 {
-                    header = "B",option = "b",content="bb",
+                    HeaderText = "Doctors Accepting MidGulf Insurance",Option = "See All",IsOptionVisible=true,
                 }
             };
             maindashboardtable.RegisterNibForCellReuse(UINib.FromName("MainDashboardViewCell", null), "dashboardCell");

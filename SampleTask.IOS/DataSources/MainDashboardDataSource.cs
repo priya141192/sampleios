@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using Foundation;
 using SampleTask.IOS.Cells;
+using SampleTask.IOS.Dto;
 using UIKit;
 
 namespace SampleTask.IOS.DataSources
 {
     public class MainDashboardDataSource : UITableViewSource
     {
-        List<EmployeeModel> students;
-        public MainDashboardDataSource(List<EmployeeModel> students)
+        List<DashboardEntityDto> Entity;
+        public MainDashboardDataSource(List<DashboardEntityDto> _entity)
         {
-            this.students = students;
+            this.Entity = _entity;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (MainDashboardViewCell)tableView.DequeueReusableCell("dashboardCell", indexPath);
-            var student = students[indexPath.Row];
-            cell.UpdateCell(student);
+            var entity = Entity[indexPath.Row];
+            cell.UpdateCell(entity);
             return cell;
         }
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            return students.Count;
+            return Entity.Count;
         }
 
 
