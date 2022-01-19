@@ -22,12 +22,21 @@ namespace SampleTask.IOS.Cells
 
         internal void UpdateCell(CustomerDto customer)
         {
+            //fonts
+            lblTestMon.Font = UIFont.FromName("Roboto-Regular", 15f);
+            lblCustName.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblCustAge.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblDays.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblName.Font = UIFont.FromName("Roboto-Bold", 15f);
+            lblCategory.Font = UIFont.FromName("Roboto-Regular", 7f);
+            lblReviews.Font = UIFont.FromName("Roboto-Regular", 10f);
+
             lblCustName.Text = customer.CustomerName;
             lblCustAge.Text = customer.CustomerAge;
             lblTestMon.Text = customer.TestMon;
             lblDays.Text = customer.Days;
             ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
-            ImgProfile.Image = UIImage.FromBundle("ImgTest.jpg");
+            ImgProfile.Image = UIImage.FromBundle("ImgTooth.jpg");
             lblName.Text = customer.TestName;
             lblCategory.Text = customer.TestCategory;
             lblReviews.Text = customer.TestReviews;
@@ -36,10 +45,13 @@ namespace SampleTask.IOS.Cells
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
-            ImgProfile.Layer.CornerRadius = 10;
-            ImgCust.Layer.CornerRadius = 10;
             ImgProfile.Layer.MasksToBounds = true;
-            ImgCust.Layer.MasksToBounds = true;
+        }
+
+        public override void LayoutSubviews()
+        {
+            base.LayoutSubviews();
+            ImgProfile.Layer.CornerRadius = (nfloat)(ImgProfile.Frame.Size.Width / 2.0);
         }
     }
 }

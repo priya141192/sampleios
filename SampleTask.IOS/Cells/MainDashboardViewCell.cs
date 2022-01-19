@@ -25,6 +25,7 @@ namespace SampleTask.IOS.Cells
 
         internal void UpdateCell(DashboardEntityDto entity)
         {
+            lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
             lblHeader.Text = entity.HeaderText;
             lblOptions.Text = entity.Option;
         }

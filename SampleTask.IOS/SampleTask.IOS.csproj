@@ -123,6 +123,7 @@
         <Folder Include="Cells\" />
         <Folder Include="DataSources\" />
         <Folder Include="Dto\" />
+        <Folder Include="Resources\Fonts\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -171,6 +172,12 @@
     <ItemGroup>
       <BundleResource Include="Resources\ImgCustomer.jpg" />
       <BundleResource Include="Resources\ImgTest.jpg" />
+      <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </BundleResource>
+      <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+      <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+      <BundleResource Include="Resources\ImgTooth.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
