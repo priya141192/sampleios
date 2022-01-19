@@ -11,33 +11,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dashboardCell" rowHeight="324" id="cxk-wN-pdQ" customClass="MainDashboardViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="439" height="324"/>
+            <rect key="frame" x="0.0" y="0.0" width="439" height="250"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
-                <rect key="frame" x="0.0" y="0.0" width="439" height="324"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e49-kB-4r1">
-                        <rect key="frame" x="20" y="20" width="399" height="284"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e49-kB-4r1">
+                        <rect key="frame" x="20" y="20" width="399" height="200"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblOption" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-8F-n2h">
-                                <rect key="frame" x="352" y="8" width="42" height="10"/>
+                                <rect key="frame" x="352" y="7.9999999999999982" width="42" height="20.333333333333329"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lblOption"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-3S-e3G">
-                                <rect key="frame" x="0.0" y="19" width="394" height="260"/>
+                                <rect key="frame" x="0.0" y="29.333333333333343" width="394" height="200"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-Kc-Lwd" customClass="MainDashboardCollectionView">
-                                        <rect key="frame" x="5" y="5" width="384" height="250"/>
+                                        <rect key="frame" x="5" y="5" width="384" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="C4Z-ES-KzF"/>
-                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3V8-nc-LGz">
-                                            <size key="itemSize" width="310" height="250"/>
+                                            <size key="itemSize" width="310" height="200"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -49,11 +46,12 @@
                                     <constraint firstItem="qbr-Kc-Lwd" firstAttribute="leading" secondItem="xSj-3S-e3G" secondAttribute="leading" constant="5" id="c86-dM-xoS"/>
                                     <constraint firstAttribute="trailing" secondItem="qbr-Kc-Lwd" secondAttribute="trailing" constant="5" id="hou-Fd-tHN"/>
                                     <constraint firstItem="qbr-Kc-Lwd" firstAttribute="top" secondItem="xSj-3S-e3G" secondAttribute="top" constant="5" id="jkl-z2-ahT"/>
-                                    <constraint firstAttribute="bottom" secondItem="qbr-Kc-Lwd" secondAttribute="bottom" constant="5" id="sMT-nv-cre"/>
+                                    <constraint firstAttribute="bottom" secondItem="qbr-Kc-Lwd" secondAttribute="bottom" constant="-5" id="sMT-nv-cre"/>
+                                    <constraint firstAttribute="height" constant="200" id="yQU-i1-kaK"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblHeader" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-Yn-Zpp">
-                                <rect key="frame" x="5" y="8" width="275" height="10"/>
+                                <rect key="frame" x="5" y="7.9999999999999982" width="275" height="20.333333333333329"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lblHeader"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="r76-eX-fMu"/>
