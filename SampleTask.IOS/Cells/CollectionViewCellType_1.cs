@@ -41,6 +41,27 @@ namespace SampleTask.IOS.Cells
             lblCategory.Text = customer.TestCategory;
             lblReviews.Text = customer.TestReviews;
         }
+        internal void UpdateDoctorCell(DoctorDto customer)
+        {
+            //fonts
+            lblTestMon.Font = UIFont.FromName("Roboto-Regular", 15f);
+            lblCustName.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblCustAge.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblDays.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblName.Font = UIFont.FromName("Roboto-Bold", 15f);
+            lblCategory.Font = UIFont.FromName("Roboto-Regular", 7f);
+            lblReviews.Font = UIFont.FromName("Roboto-Regular", 10f);
+
+            //lblCustName.Text = customer.CustomerName;
+            //lblCustAge.Text = customer.CustomerAge;
+            //lblTestMon.Text = customer.TestMon;
+            //lblDays.Text = customer.Days;
+            //ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
+            //ImgProfile.Image = UIImage.FromBundle("ImgTooth.jpg");
+            //lblName.Text = customer.TestName;
+            //lblCategory.Text = customer.TestCategory;
+            //lblReviews.Text = customer.TestReviews;
+        }
 
         public override void AwakeFromNib()
         {

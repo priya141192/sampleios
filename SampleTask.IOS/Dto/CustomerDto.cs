@@ -16,5 +16,6 @@ namespace SampleTask.IOS.Dto
         public string TestMon { get; set; }
         public string TestCategory { get; set; }
         public string TestReviews { get; set; }
+        public CellType CellType { get; set; }
     }
 }

@@ -9,10 +9,10 @@ namespace SampleTask.IOS.DataSources
 {
     public class MainDashboardDataSource : UITableViewSource
     {
-        List<DashboardEntityDto> Entity;
+        List<DashboardEntityDto> Entity { get; set; }
         public MainDashboardDataSource(List<DashboardEntityDto> _entity)
         {
-            this.Entity = _entity;
+            Entity = _entity;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)

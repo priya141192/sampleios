@@ -168,6 +168,7 @@
         <Compile Include="Views\MainDashboardCollectionView.cs" />
         <Compile Include="Dto\DashboardEntityDto.cs" />
         <Compile Include="Dto\CustomerDto.cs" />
+        <Compile Include="Dto\DoctorDto.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\ImgCustomer.jpg" />
