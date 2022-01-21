@@ -35,7 +35,7 @@ namespace SampleTask.IOS.Cells
             lblCustAge.Text = customer.CustomerAge;
             lblTestMon.Text = customer.TestMon;
             lblDays.Text = customer.Days;
-            ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
+            ImgCust.Image = UIImage.FromBundle("ImgTooth.jpg");
             ImgProfile.Image = UIImage.FromBundle("ImgTooth.jpg");
             lblName.Text = customer.TestName;
             lblCategory.Text = customer.TestCategory;
@@ -72,7 +72,7 @@ namespace SampleTask.IOS.Cells
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
-            ImgProfile.Layer.CornerRadius = (nfloat)(ImgProfile.Frame.Size.Width / 2.0);
+            //ImgProfile.Layer.CornerRadius = (nfloat)(ImgProfile.Frame.Size.Width / 2.0);
         }
     }
 }

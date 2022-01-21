@@ -24,10 +24,10 @@ namespace SampleTask.IOS.Cells
         internal void UpdateCell(DoctorDto doctor)
         {
             ImgDoc.Image = UIImage.FromBundle("ImgTest.jpg");
-            lblName.Text = doctor.DocName;
-            lblDepartment.Text = doctor.Department;
-            lblCategory.Text = doctor.Category;
-            lblReviews.Text = doctor.Reviews;
+            //lblName.Text = doctor.DocName;
+            //lblDepartment.Text = doctor.Department;
+            //lblCategory.Text = doctor.Category;
+            //lblReviews.Text = doctor.Reviews;
         }
     }
 }

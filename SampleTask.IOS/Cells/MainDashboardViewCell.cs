@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Foundation;
 using SampleTask.IOS.DataSources;
+using SampleTask.IOS.Delegates;
 using SampleTask.IOS.Dto;
 using UIKit;
 
@@ -31,6 +32,17 @@ namespace SampleTask.IOS.Cells
             lblHeader.Text = entity.HeaderText;
             lblOptions.Text = entity.Option;
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
+            dashboardcollectioncell.Delegate = new MainDashboardCollectionViewLayout();
+        }
+
+        internal void UpdateDoctorCell(DashboardEntityDto entity)
+        {
+            dashboardEntity = entity;
+            lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
+            lblHeader.Text = entity.HeaderText;
+            lblOptions.Text = entity.Option;
+            dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
+            dashboardcollectioncell.Delegate = new DoctorViewLayout();
         }
 
         public override void AwakeFromNib()

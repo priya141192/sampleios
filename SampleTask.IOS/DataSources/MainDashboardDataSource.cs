@@ -19,14 +19,20 @@ namespace SampleTask.IOS.DataSources
         {
             var cell = (MainDashboardViewCell)tableView.DequeueReusableCell("dashboardCell", indexPath);
             var entity = Entity[indexPath.Row];
-            cell.UpdateCell(entity);
+            if (entity.ContentType == CellType.Customer)
+            {
+                cell.UpdateCell(entity);
+            }
+            else if (entity.ContentType == CellType.Doctor)
+            {
+                cell.UpdateDoctorCell(entity);
+            }
+
             return cell;
         }
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return Entity.Count;
         }
-
-
     }
 }

@@ -124,6 +124,7 @@
         <Folder Include="DataSources\" />
         <Folder Include="Dto\" />
         <Folder Include="Resources\Fonts\" />
+        <Folder Include="Delegates\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -132,6 +133,7 @@
         <InterfaceDefinition Include="Cells\MainDashboardViewCell.xib" />
         <InterfaceDefinition Include="Cells\CollectionViewCellType_1.xib" />
         <InterfaceDefinition Include="Cells\CollectionViewCellType_2.xib" />
+        <InterfaceDefinition Include="Views\DashboardViewController.xib" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -169,6 +171,13 @@
         <Compile Include="Dto\DashboardEntityDto.cs" />
         <Compile Include="Dto\CustomerDto.cs" />
         <Compile Include="Dto\DoctorDto.cs" />
+        <Compile Include="Delegates\MainDashboardCollectionViewLayout.cs" />
+        <Compile Include="Views\DashboardViewController.cs" />
+        <Compile Include="Views\DashboardViewController.designer.cs">
+          <DependentUpon>DashboardViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Delegates\MainDashboardSections.cs" />
+        <Compile Include="Delegates\DoctorViewLayout.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\ImgCustomer.jpg" />
