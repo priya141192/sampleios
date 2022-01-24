@@ -27,7 +27,7 @@ namespace SampleTask.IOS.Cells
             lblCustName.Font = UIFont.FromName("Roboto-Bold", 10f);
             lblCustAge.Font = UIFont.FromName("Roboto-Bold", 10f);
             lblDays.Font = UIFont.FromName("Roboto-Bold", 10f);
-            lblName.Font = UIFont.FromName("Roboto-Bold", 15f);
+            lblName.Font = UIFont.FromName("Roboto-Bold", 10f);
             lblCategory.Font = UIFont.FromName("Roboto-Regular", 7f);
             lblReviews.Font = UIFont.FromName("Roboto-Regular", 10f);
 
@@ -72,7 +72,7 @@ namespace SampleTask.IOS.Cells
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
-            //ImgProfile.Layer.CornerRadius = (nfloat)(ImgProfile.Frame.Size.Width / 2.0);
+            ImgProfile.Layer.CornerRadius = (nfloat)(ImgProfile.Frame.Size.Width / 2.0);
         }
     }
 }

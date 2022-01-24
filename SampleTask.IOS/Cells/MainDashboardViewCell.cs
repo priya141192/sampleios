@@ -30,7 +30,10 @@ namespace SampleTask.IOS.Cells
             dashboardEntity = entity;
             lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
             lblHeader.Text = entity.HeaderText;
+            lblOptions.Font = UIFont.FromName("Roboto-Bold", 12f);
             lblOptions.Text = entity.Option;
+            lblHeader.LineBreakMode = UILineBreakMode.WordWrap;
+            lblHeader.Lines = 0;
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
             dashboardcollectioncell.Delegate = new MainDashboardCollectionViewLayout();
         }
@@ -40,7 +43,10 @@ namespace SampleTask.IOS.Cells
             dashboardEntity = entity;
             lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
             lblHeader.Text = entity.HeaderText;
+            lblOptions.Font = UIFont.FromName("Roboto-Bold", 12f);
             lblOptions.Text = entity.Option;
+            lblHeader.LineBreakMode = UILineBreakMode.WordWrap;
+            lblHeader.Lines = 0;
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
             dashboardcollectioncell.Delegate = new DoctorViewLayout();
         }

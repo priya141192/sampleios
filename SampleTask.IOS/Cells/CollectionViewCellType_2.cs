@@ -23,11 +23,28 @@ namespace SampleTask.IOS.Cells
 
         internal void UpdateCell(DoctorDto doctor)
         {
+            lblName.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblCategory.Font = UIFont.FromName("Roboto-Regular", 10f);
+            lblDepartment.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblReviews.Font = UIFont.FromName("Roboto-Bold", 10f);
+
             ImgDoc.Image = UIImage.FromBundle("ImgTest.jpg");
-            //lblName.Text = doctor.DocName;
-            //lblDepartment.Text = doctor.Department;
-            //lblCategory.Text = doctor.Category;
-            //lblReviews.Text = doctor.Reviews;
+            lblName.Text = doctor.DocName;
+            lblDepartment.Text = doctor.Department;
+            lblCategory.Text = doctor.Category;
+            lblReviews.Text = doctor.Reviews;
+        }
+
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+            ImgDoc.Layer.MasksToBounds = true;
+        }
+
+        public override void LayoutSubviews()
+        {
+            base.LayoutSubviews();
+            ImgDoc.Layer.CornerRadius = 10;
         }
     }
 }

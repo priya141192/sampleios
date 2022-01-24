@@ -14,8 +14,6 @@ namespace SampleTask.IOS.DataSources
         private MainDashboardCollectionView mainDashboardCollectionView;
         #region Computed Properties
         public MainDashboardCollectionView CollectionView { get; set; }
-        //public List<CustomerDto> CustomerList { get; set; } = new List<CustomerDto>();
-        //public List<DoctorDto> DoctorList { get; set; } = new List<DoctorDto>();
         public DashboardEntityDto entityDto { get; set; }
         CustomerDto customer_cell_type = new CustomerDto();
         DoctorDto doctor_cell_type = new DoctorDto();
@@ -24,52 +22,6 @@ namespace SampleTask.IOS.DataSources
         #region Constructors
         public CollectionViewType_1_Source()
         {
-            //CustomerList = new List<CustomerDto>
-            //{
-            //    new CustomerDto
-            //    {
-            //        CustomerName = "Rohit",
-            //        CustomerAge = "29 Years",
-            //        TestName = "Dr. Nada Nada",
-            //        TestMon = "Test",
-            //        Days = "26 Days ago",
-            //        TestCategory = "Internal Medicine",
-            //        TestReviews = "401 Reviews",
-            //        CellType = CellType.Customer
-
-            //    },
-            //    new CustomerDto
-            //    {
-            //        CustomerName = "Priya",
-            //        CustomerAge = "29 Years",
-            //        TestName = "Dr. Mohammed Arif",
-            //        TestMon = "asdfghjkl qwertyui qwertyui",
-            //        Days = "1 year ago",
-            //        TestCategory = "Ayurved Medicine",
-            //        TestReviews = "800 Reviews",
-            //        CellType = CellType.Customer
-            //    },
-            //};
-
-            //DoctorList = new List<DoctorDto>
-            //{
-            //    new DoctorDto
-            //    {
-            //        DocName = "Dr. Rohit",
-            //        Department = "Pyschology",
-            //        Category = "NON-MEDICAL-SPECIALIST",
-            //        Reviews = "5 reviews",
-            //        CellType = CellType.Doctor
-            //    },
-            //    new DoctorDto
-            //    {
-            //        DocName = "Dr. Priya",
-            //        Department = "Oral Surgery",
-            //        Category = "SPECIALIST",
-            //        Reviews = "7 reviews",
-            //        CellType = CellType.Doctor
-            //    },
-            //};
         }
 
         public CollectionViewType_1_Source(DashboardEntityDto dashboardEntity)

@@ -25,11 +25,11 @@ namespace SampleTask.IOS.Views
                 {
                     CustomerName = "Rohit",
                     CustomerAge = "29 Years",
-                    TestName = "qwertyuio",
-                    TestMon = "qwertyui",
-                    Days = "wertyui",
-                    TestCategory = "sdfgyhuji",
-                    TestReviews = "dsfdgfhgjh",
+                    TestName = "Dr. Nada Nada",
+                    TestMon = "Test",
+                    Days = "26 Days ago",
+                    TestCategory = "Internal Medicine",
+                    TestReviews = "401 Reviews",
                     CellType = CellType.Customer
 
                 },
@@ -37,11 +37,11 @@ namespace SampleTask.IOS.Views
                 {
                     CustomerName = "Priya",
                     CustomerAge = "29 Years",
-                    TestName = "sdfghjk",
-                    TestMon = "sdfghjkl",
-                    Days = "asrtyuertyui",
-                    TestCategory = "sdfghghjk",
-                    TestReviews = "dfguiertyuis",
+                    TestName = "Dr. Mohammed Arif",
+                    TestMon = "asdfghjkl qwertyui qwertyui",
+                    Days = "1 year ago",
+                    TestCategory = "Ayurved Medicine",
+                    TestReviews = "800 Reviews",
                     CellType = CellType.Customer
                 },
             };
@@ -50,50 +50,50 @@ namespace SampleTask.IOS.Views
             {
                 new DoctorDto
                 {
-                    DocName = "Rohit",
-                    Department = "wdfghjksdfghj",
-                    Category = "wertyuioduirtyuio",
-                    Reviews = "3wdrftgyhuijosedrftgyuhij",
+                    DocName = "Dr. Zohoor Ahmad Zohoor",
+                    Department = "Pyschology",
+                    Category = "NON-MEDICAL-SPECIALIST",
+                    Reviews = "5 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Priya",
-                    Department = "wertyuiertyuio",
-                    Category = "asdfghj",
-                    Reviews = "ertyuiertyuio",
+                    DocName = "Dr. Anas Mohammad Rasqwe",
+                    Department = "Oral Surgery",
+                    Category = "SPECIALIST",
+                    Reviews = "7 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Priya",
-                    Department = "wertyuiertyuio",
-                    Category = "asdfghj",
-                    Reviews = "ertyuiertyuio",
+                    DocName = "Dr. Zohoor Ahmad Zohoor",
+                    Department = "Pyschology",
+                    Category = "NON-MEDICAL-SPECIALIST",
+                    Reviews = "5 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Priya",
-                    Department = "wertyuiertyuio",
-                    Category = "asdfghj",
-                    Reviews = "ertyuiertyuio",
+                    DocName = "Dr. Anas Mohammad Rasqwe",
+                    Department = "Oral Surgery",
+                    Category = "SPECIALIST",
+                    Reviews = "7 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Priya",
-                    Department = "wertyuiertyuio",
-                    Category = "asdfghj",
-                    Reviews = "ertyuiertyuio",
+                    DocName = "Dr. Zohoor Ahmad Zohoor",
+                    Department = "Pyschology",
+                    Category = "NON-MEDICAL-SPECIALIST",
+                    Reviews = "5 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Priya",
-                    Department = "wertyuiertyuio",
-                    Category = "asdfghj",
-                    Reviews = "ertyuiertyuio",
+                    DocName = "Dr. Anas Mohammad Rasqwe",
+                    Department = "Oral Surgery",
+                    Category = "SPECIALIST",
+                    Reviews = "7 reviews",
                     CellType = CellType.Doctor
                 },
             };
@@ -102,17 +102,17 @@ namespace SampleTask.IOS.Views
             {
                 new DashboardEntityDto
                 {
-                    HeaderText = "qwertyui",Option = "",IsOptionVisible=false,ContentType = CellType.Customer,CustomerList = CustomerList
+                    HeaderText = "Our Happy Customers",Option = "",IsOptionVisible=false,ContentType = CellType.Customer,CustomerList = CustomerList
                 },
                 new DashboardEntityDto
                 {
-                    HeaderText = "dfghjkl;",Option = "",IsOptionVisible=true,ContentType = CellType.Doctor,DoctorList = DoctorList
+                    HeaderText = "Doctors Accepting MidGulf Insurance",Option = "See All",IsOptionVisible=true,ContentType = CellType.Doctor,DoctorList = DoctorList
                 }
             };
+
             maindashboardtable.RegisterNibForCellReuse(UINib.FromName("MainDashboardViewCell", null), "dashboardCell");
             maindashboardtable.Source = new MainDashboardDataSource(employees);
             maindashboardtable.ContentInset = new UIEdgeInsets(40, 0, 0, 0);
-            //maindashboardtable.EstimatedRowHeight = 500f;
         }
 
         public override void ViewWillAppear(bool animated)
@@ -121,9 +121,7 @@ namespace SampleTask.IOS.Views
 
             // Initialize table
             maindashboardtable.Source = new MainDashboardDataSource(employees);
-            //maindashboardtable.Delegate = new GrowRowTableDelegate();
             maindashboardtable.RowHeight = UITableView.AutomaticDimension;
-            maindashboardtable.EstimatedRowHeight = 50f;
             maindashboardtable.ReloadData();
         }
 
