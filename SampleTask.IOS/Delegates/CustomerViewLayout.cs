@@ -1,15 +1,13 @@
 ﻿using System;
 using CoreGraphics;
 using Foundation;
-using ObjCRuntime;
 using UIKit;
 
 namespace SampleTask.IOS.Delegates
 {
-    public class MainDashboardCollectionViewLayout : UICollectionViewDelegateFlowLayout
+    public class CustomerViewLayout : UICollectionViewDelegateFlowLayout
     {
-        //public IOnTutorialPageScroll OnTutorialPageScrollDelegate;
-        public MainDashboardCollectionViewLayout()
+        public CustomerViewLayout()
         {
         }
         public override CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)

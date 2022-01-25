@@ -20,6 +20,9 @@ namespace SampleTask.IOS.Cells
 
 		[Outlet]
 		UIKit.UILabel lblOptions { get; set; }
+
+		[Outlet]
+		UIKit.UIView maincontainer { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,14 +31,19 @@ namespace SampleTask.IOS.Cells
 				dashboardcollectioncell = null;
 			}
 
+			if (lblHeader != null) {
+				lblHeader.Dispose ();
+				lblHeader = null;
+			}
+
 			if (lblOptions != null) {
 				lblOptions.Dispose ();
 				lblOptions = null;
 			}
 
-			if (lblHeader != null) {
-				lblHeader.Dispose ();
-				lblHeader = null;
+			if (maincontainer != null) {
+				maincontainer.Dispose ();
+				maincontainer = null;
 			}
 		}
 	}

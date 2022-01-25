@@ -10,6 +10,7 @@ namespace SampleTask.IOS.DataSources
     public class MainDashboardDataSource : UITableViewSource
     {
         List<DashboardEntityDto> Entity { get; set; }
+        MainDashboardViewCell mainDashboardViewCell;
         public MainDashboardDataSource(List<DashboardEntityDto> _entity)
         {
             Entity = _entity;
@@ -17,19 +18,32 @@ namespace SampleTask.IOS.DataSources
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            var cell = (MainDashboardViewCell)tableView.DequeueReusableCell("dashboardCell", indexPath);
+            mainDashboardViewCell = (MainDashboardViewCell)tableView.DequeueReusableCell("dashboardCell", indexPath);
             var entity = Entity[indexPath.Row];
-            if (entity.ContentType == CellType.Customer)
-            {
-                cell.UpdateCell(entity);
-            }
-            else if (entity.ContentType == CellType.Doctor)
-            {
-                cell.UpdateDoctorCell(entity);
-            }
-
-            return cell;
+            GetCellType(entity);
+            return mainDashboardViewCell;
         }
+
+        private void GetCellType(DashboardEntityDto entity)
+        {
+            try
+            {
+                switch (entity.ContentType)
+                {
+                    case CellType.Customer:
+                        mainDashboardViewCell.UpdateCell(entity);
+                        break;
+                    case CellType.Doctor:
+                         mainDashboardViewCell.UpdateDoctorCell(entity);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return Entity.Count;

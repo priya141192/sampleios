@@ -29,14 +29,14 @@ namespace SampleTask.IOS.Cells
             lblCustAge.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
             lblDays.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
             lblName.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
-            lblCategory.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.DESCRIPTION);
-            lblReviews.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.DESCRIPTION);
+            lblCategory.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.SUBTITLE);
+            lblReviews.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.SUBTITLE);
 
             lblCustName.Text = customer.CustomerName;
             lblCustAge.Text = customer.CustomerAge;
             lblTestMon.Text = customer.TestMon;
             lblDays.Text = customer.Days;
-            ImgCust.Image = UIImage.FromBundle("ImgTooth.jpg");
+            ImgCust.Image = UIImage.FromBundle("ImgCustomer.jpg");
             ImgProfile.Image = UIImage.FromBundle("ImgTooth.jpg");
             lblName.Text = customer.TestName;
             lblCategory.Text = customer.TestCategory;

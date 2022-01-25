@@ -21,10 +21,11 @@ namespace SampleTask.IOS.Helper
         {
             HEADER = 0,
             TITLE = 1,
-            DESCRIPTION = 2,
-            BUTTON = 3,
-            HEADER_LARGE = 4,
-            OPTION_LABEL = 5
+            SUBTITLE = 2,
+            DESCRIPTION = 3,
+            BUTTON = 4,
+            HEADER_LARGE = 5,
+            OPTION_LABEL = 6,
         }
 
         public static string GetFontName(FontType Type)
@@ -50,6 +51,7 @@ namespace SampleTask.IOS.Helper
                 {
                     case FontSize.HEADER: return fontSize + 14;
                     case FontSize.TITLE: return fontSize + 12;
+                    case FontSize.SUBTITLE: return fontSize + 10;
                     case FontSize.DESCRIPTION: return fontSize + 8;
                     case FontSize.BUTTON: return fontSize + 6;
                     case FontSize.HEADER_LARGE: return fontSize + 16;

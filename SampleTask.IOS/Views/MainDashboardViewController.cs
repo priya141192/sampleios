@@ -58,7 +58,7 @@ namespace SampleTask.IOS.Views
                 },
                 new DoctorDto
                 {
-                    DocName = "Dr. Anas Mohammad Rasqwe",
+                    DocName = "Dr. Anas Mohammad Rasqweqwer qwert",
                     Department = "Oral Surgery",
                     Category = "SPECIALIST",
                     Reviews = "7 reviews",
@@ -66,32 +66,32 @@ namespace SampleTask.IOS.Views
                 },
                 new DoctorDto
                 {
-                    DocName = "Dr. Zohoor Ahmad Zohoor",
+                    DocName = "Dr. Barakat Mamdooh Ahooruer",
                     Department = "Pyschology",
-                    Category = "NON-MEDICAL-SPECIALIST",
-                    Reviews = "5 reviews",
+                    Category = "SPECIALIST",
+                    Reviews = "282 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Dr. Anas Mohammad Rasqwe",
+                    DocName = "Dr. Yousef Tawfik YousefRaq",
                     Department = "Oral Surgery",
                     Category = "SPECIALIST",
-                    Reviews = "7 reviews",
-                    CellType = CellType.Doctor
-                },
-                new DoctorDto
-                {
-                    DocName = "Dr. Zohoor Ahmad Zohoor",
-                    Department = "Pyschology",
-                    Category = "NON-MEDICAL-SPECIALIST",
                     Reviews = "5 reviews",
                     CellType = CellType.Doctor
                 },
                 new DoctorDto
                 {
-                    DocName = "Dr. Anas Mohammad Rasqwe",
-                    Department = "Oral Surgery",
+                    DocName = "Dr. Safi SAfi",
+                    Department = "Family Medicine",
+                    Category = "SPECIALIST",
+                    Reviews = "5 reviews",
+                    CellType = CellType.Doctor
+                },
+                new DoctorDto
+                {
+                    DocName = "Dr. Saud Abdullah",
+                    Department = "Neurology",
                     Category = "SPECIALIST",
                     Reviews = "7 reviews",
                     CellType = CellType.Doctor

@@ -19,6 +19,9 @@ namespace SampleTask.IOS.Cells
 		UIKit.UIImageView ImgDoc { get; set; }
 
 		[Outlet]
+		UIKit.UIView labelContainer { get; set; }
+
+		[Outlet]
 		UIKit.UILabel lblCategory { get; set; }
 
 		[Outlet]
@@ -32,9 +35,9 @@ namespace SampleTask.IOS.Cells
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblName != null) {
-				lblName.Dispose ();
-				lblName = null;
+			if (btnNext != null) {
+				btnNext.Dispose ();
+				btnNext = null;
 			}
 
 			if (ImgDoc != null) {
@@ -42,14 +45,19 @@ namespace SampleTask.IOS.Cells
 				ImgDoc = null;
 			}
 
+			if (lblCategory != null) {
+				lblCategory.Dispose ();
+				lblCategory = null;
+			}
+
 			if (lblDepartment != null) {
 				lblDepartment.Dispose ();
 				lblDepartment = null;
 			}
 
-			if (lblCategory != null) {
-				lblCategory.Dispose ();
-				lblCategory = null;
+			if (lblName != null) {
+				lblName.Dispose ();
+				lblName = null;
 			}
 
 			if (lblReviews != null) {
@@ -57,9 +65,9 @@ namespace SampleTask.IOS.Cells
 				lblReviews = null;
 			}
 
-			if (btnNext != null) {
-				btnNext.Dispose ();
-				btnNext = null;
+			if (labelContainer != null) {
+				labelContainer.Dispose ();
+				labelContainer = null;
 			}
 		}
 	}

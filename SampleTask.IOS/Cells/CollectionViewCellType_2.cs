@@ -25,8 +25,8 @@ namespace SampleTask.IOS.Cells
         internal void UpdateCell(DoctorDto doctor)
         {
             lblName.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
-            lblCategory.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.TITLE);
-            lblDepartment.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
+            lblCategory.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.SUBTITLE);
+            lblDepartment.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.TITLE);
             lblReviews.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
 
             ImgDoc.Image = UIImage.FromBundle("ImgTest.jpg");
@@ -40,12 +40,22 @@ namespace SampleTask.IOS.Cells
         {
             base.AwakeFromNib();
             ImgDoc.Layer.MasksToBounds = true;
+            lblCategory.Layer.MasksToBounds = true;
         }
 
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
             ImgDoc.Layer.CornerRadius = 10;
+            lblCategory.Layer.CornerRadius = 2;
+            float availableLabelWidth = (float)labelContainer.Frame.Size.Width;
+            lblName.PreferredMaxLayoutWidth = availableLabelWidth;
+            lblName.TranslatesAutoresizingMaskIntoConstraints = false;
+            lblName.AdjustsFontSizeToFitWidth = false;
+            lblName.LineBreakMode = UILineBreakMode.TailTruncation;
+            lblDepartment.PreferredMaxLayoutWidth = availableLabelWidth;
+            lblCategory.PreferredMaxLayoutWidth = availableLabelWidth;
+            lblReviews.PreferredMaxLayoutWidth = availableLabelWidth;
         }
     }
 }

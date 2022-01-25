@@ -30,12 +30,9 @@ namespace SampleTask.IOS.Cells
         {
             dashboardEntity = entity;
             lblHeader.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.HEADER_LARGE);
-            lblOptions.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.OPTION_LABEL);
+            lblOptions.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.OPTION_LABEL);
             lblHeader.Text = entity.HeaderText;
             lblOptions.Text = entity.Option;
-            lblHeader.LineBreakMode = UILineBreakMode.WordWrap;
-            lblHeader.Lines = 0;
-            dashboardcollectioncell.AllowsSelection = false;
         }
 
         internal void UpdateCell(DashboardEntityDto entity)
@@ -43,7 +40,7 @@ namespace SampleTask.IOS.Cells
             dashboardEntity = entity;
             UpdateData(entity);
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
-            dashboardcollectioncell.Delegate = new MainDashboardCollectionViewLayout();
+            dashboardcollectioncell.Delegate = new CustomerViewLayout();
         }
 
         internal void UpdateDoctorCell(DashboardEntityDto entity)
@@ -60,7 +57,9 @@ namespace SampleTask.IOS.Cells
             base.AwakeFromNib();
             dashboardcollectioncell.RegisterNibForCell(UINib.FromName("CollectionViewCellType_1",null), "CellType1");
             dashboardcollectioncell.RegisterNibForCell(UINib.FromName("CollectionViewCellType_2", null), "CellType2");
-            
+            var backgroundView = new UIView();
+            backgroundView.BackgroundColor = UIColor.Clear;
+            maincontainer = backgroundView;
         }
     }
 }
