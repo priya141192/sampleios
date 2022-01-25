@@ -4,6 +4,7 @@ using Foundation;
 using SampleTask.IOS.DataSources;
 using SampleTask.IOS.Delegates;
 using SampleTask.IOS.Dto;
+using SampleTask.IOS.Helper;
 using UIKit;
 
 namespace SampleTask.IOS.Cells
@@ -25,15 +26,22 @@ namespace SampleTask.IOS.Cells
 
         }
 
-        internal void UpdateCell(DashboardEntityDto entity)
+        public void UpdateData(DashboardEntityDto entity)
         {
             dashboardEntity = entity;
-            lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
+            lblHeader.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.HEADER_LARGE);
+            lblOptions.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.OPTION_LABEL);
             lblHeader.Text = entity.HeaderText;
-            lblOptions.Font = UIFont.FromName("Roboto-Bold", 12f);
             lblOptions.Text = entity.Option;
             lblHeader.LineBreakMode = UILineBreakMode.WordWrap;
             lblHeader.Lines = 0;
+            dashboardcollectioncell.AllowsSelection = false;
+        }
+
+        internal void UpdateCell(DashboardEntityDto entity)
+        {
+            dashboardEntity = entity;
+            UpdateData(entity);
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
             dashboardcollectioncell.Delegate = new MainDashboardCollectionViewLayout();
         }
@@ -41,15 +49,11 @@ namespace SampleTask.IOS.Cells
         internal void UpdateDoctorCell(DashboardEntityDto entity)
         {
             dashboardEntity = entity;
-            lblHeader.Font = UIFont.FromName("Roboto-Bold", 15f);
-            lblHeader.Text = entity.HeaderText;
-            lblOptions.Font = UIFont.FromName("Roboto-Bold", 12f);
-            lblOptions.Text = entity.Option;
-            lblHeader.LineBreakMode = UILineBreakMode.WordWrap;
-            lblHeader.Lines = 0;
+            UpdateData(entity);
             dashboardcollectioncell.Source = new CollectionViewType_1_Source(dashboardEntity);
             dashboardcollectioncell.Delegate = new DoctorViewLayout();
         }
+
 
         public override void AwakeFromNib()
         {

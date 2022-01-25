@@ -125,6 +125,8 @@
         <Folder Include="Dto\" />
         <Folder Include="Resources\Fonts\" />
         <Folder Include="Delegates\" />
+        <Folder Include="Helper\" />
+        <Folder Include="Constants\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -178,6 +180,9 @@
         </Compile>
         <Compile Include="Delegates\MainDashboardSections.cs" />
         <Compile Include="Delegates\DoctorViewLayout.cs" />
+        <Compile Include="Helper\FontManager.cs" />
+        <Compile Include="Helper\CommonMethods.cs" />
+        <Compile Include="Constants\StringConstant.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\ImgCustomer.jpg" />

@@ -21,17 +21,17 @@
                         <rect key="frame" x="20" y="20" width="399" height="200"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblOption" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-8F-n2h">
-                                <rect key="frame" x="352" y="7.9999999999999982" width="42" height="20.333333333333329"/>
+                                <rect key="frame" x="355" y="2" width="42" height="20.333333333333332"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lblOption"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.054357819260000002" green="0.99889463190000005" blue="0.94004172090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-3S-e3G">
-                                <rect key="frame" x="0.0" y="29.333333333333343" width="394" height="180"/>
+                                <rect key="frame" x="-3" y="23.333333333333343" width="400" height="180"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-Kc-Lwd" customClass="MainDashboardCollectionView">
-                                        <rect key="frame" x="5" y="5" width="384" height="170"/>
+                                        <rect key="frame" x="2" y="2" width="396" height="176"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3V8-nc-LGz">
                                             <size key="itemSize" width="310" height="200"/>
@@ -42,15 +42,15 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qbr-Kc-Lwd" firstAttribute="leading" secondItem="xSj-3S-e3G" secondAttribute="leading" constant="5" id="c86-dM-xoS"/>
-                                    <constraint firstAttribute="trailing" secondItem="qbr-Kc-Lwd" secondAttribute="trailing" constant="5" id="hou-Fd-tHN"/>
-                                    <constraint firstItem="qbr-Kc-Lwd" firstAttribute="top" secondItem="xSj-3S-e3G" secondAttribute="top" constant="5" id="jkl-z2-ahT"/>
-                                    <constraint firstAttribute="bottom" secondItem="qbr-Kc-Lwd" secondAttribute="bottom" constant="5" id="sMT-nv-cre"/>
+                                    <constraint firstItem="qbr-Kc-Lwd" firstAttribute="leading" secondItem="xSj-3S-e3G" secondAttribute="leading" constant="2" id="c86-dM-xoS"/>
+                                    <constraint firstAttribute="trailing" secondItem="qbr-Kc-Lwd" secondAttribute="trailing" constant="2" id="hou-Fd-tHN"/>
+                                    <constraint firstItem="qbr-Kc-Lwd" firstAttribute="top" secondItem="xSj-3S-e3G" secondAttribute="top" constant="2" id="jkl-z2-ahT"/>
+                                    <constraint firstAttribute="bottom" secondItem="qbr-Kc-Lwd" secondAttribute="bottom" constant="2" id="sMT-nv-cre"/>
                                     <constraint firstAttribute="height" constant="180" id="yQU-i1-kaK"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblHeader" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-Yn-Zpp">
-                                <rect key="frame" x="5" y="7.9999999999999982" width="230" height="20.333333333333329"/>
+                                <rect key="frame" x="2" y="2" width="230" height="20.333333333333332"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lblHeader"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="r76-eX-fMu"/>
@@ -61,21 +61,21 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="MqR-8F-n2h" firstAttribute="top" secondItem="e49-kB-4r1" secondAttribute="top" constant="8" id="2Nv-dp-OTL"/>
-                            <constraint firstItem="Ocz-Yn-Zpp" firstAttribute="top" secondItem="e49-kB-4r1" secondAttribute="top" constant="8" id="7FR-47-YE0"/>
-                            <constraint firstItem="Ocz-Yn-Zpp" firstAttribute="leading" secondItem="e49-kB-4r1" secondAttribute="leading" constant="5" id="BMc-e3-qfl"/>
+                            <constraint firstItem="MqR-8F-n2h" firstAttribute="top" secondItem="e49-kB-4r1" secondAttribute="top" constant="2" id="2Nv-dp-OTL"/>
+                            <constraint firstItem="Ocz-Yn-Zpp" firstAttribute="top" secondItem="e49-kB-4r1" secondAttribute="top" constant="2" id="7FR-47-YE0"/>
+                            <constraint firstItem="Ocz-Yn-Zpp" firstAttribute="leading" secondItem="e49-kB-4r1" secondAttribute="leading" constant="2" id="BMc-e3-qfl"/>
                             <constraint firstItem="Ocz-Yn-Zpp" firstAttribute="leading" secondItem="xSj-3S-e3G" secondAttribute="leading" constant="5" id="E6X-kR-Siq"/>
                             <constraint firstItem="xSj-3S-e3G" firstAttribute="top" secondItem="MqR-8F-n2h" secondAttribute="bottom" constant="1" id="TfQ-zN-sKu"/>
-                            <constraint firstAttribute="bottom" secondItem="xSj-3S-e3G" secondAttribute="bottom" constant="5" id="eBk-js-3wp"/>
-                            <constraint firstAttribute="trailing" secondItem="xSj-3S-e3G" secondAttribute="trailing" constant="5" id="skw-Y5-Xzq"/>
-                            <constraint firstAttribute="trailing" secondItem="MqR-8F-n2h" secondAttribute="trailing" constant="5" id="x4k-Z5-5QV"/>
+                            <constraint firstAttribute="bottom" secondItem="xSj-3S-e3G" secondAttribute="bottom" constant="2" id="eBk-js-3wp"/>
+                            <constraint firstAttribute="trailing" secondItem="xSj-3S-e3G" secondAttribute="trailing" constant="2" id="skw-Y5-Xzq"/>
+                            <constraint firstAttribute="trailing" secondItem="MqR-8F-n2h" secondAttribute="trailing" constant="2" id="x4k-Z5-5QV"/>
                             <constraint firstItem="xSj-3S-e3G" firstAttribute="top" secondItem="Ocz-Yn-Zpp" secondAttribute="bottom" constant="1" id="yMY-Gr-Chm"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="e49-kB-4r1" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="20" symbolic="YES" id="1Ed-v5-BeB"/>
-                    <constraint firstItem="e49-kB-4r1" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" id="30G-2z-8kh"/>
+                    <constraint firstItem="e49-kB-4r1" firstAttribute="trailing" secondItem="YTl-1W-gDM" secondAttribute="trailingMargin" id="CSs-Fm-L4r"/>
                     <constraint firstItem="e49-kB-4r1" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="20" symbolic="YES" id="J6k-AQ-0iA"/>
                     <constraint firstAttribute="bottom" secondItem="e49-kB-4r1" secondAttribute="bottom" constant="20" symbolic="YES" id="kUC-yU-hvF"/>
                 </constraints>

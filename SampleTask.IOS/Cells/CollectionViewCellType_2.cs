@@ -2,6 +2,7 @@
 
 using Foundation;
 using SampleTask.IOS.Dto;
+using SampleTask.IOS.Helper;
 using UIKit;
 
 namespace SampleTask.IOS.Cells
@@ -23,10 +24,10 @@ namespace SampleTask.IOS.Cells
 
         internal void UpdateCell(DoctorDto doctor)
         {
-            lblName.Font = UIFont.FromName("Roboto-Bold", 10f);
-            lblCategory.Font = UIFont.FromName("Roboto-Regular", 10f);
-            lblDepartment.Font = UIFont.FromName("Roboto-Bold", 10f);
-            lblReviews.Font = UIFont.FromName("Roboto-Bold", 10f);
+            lblName.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
+            lblCategory.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_REGULAR, FontManager.FontSize.TITLE);
+            lblDepartment.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
+            lblReviews.Font = CommonMethods.GetFontByType(FontManager.FontType.ROBO_FONT_BOLD, FontManager.FontSize.TITLE);
 
             ImgDoc.Image = UIImage.FromBundle("ImgTest.jpg");
             lblName.Text = doctor.DocName;
