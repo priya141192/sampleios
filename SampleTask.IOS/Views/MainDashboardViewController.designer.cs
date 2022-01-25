@@ -14,12 +14,20 @@ namespace SampleTask.IOS.Views
 	{
 		[Outlet]
 		UIKit.UITableView maindashboardtable { get; set; }
+
+		[Outlet]
+		UIKit.UINavigationBar navigationbar { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (maindashboardtable != null) {
 				maindashboardtable.Dispose ();
 				maindashboardtable = null;
+			}
+
+			if (navigationbar != null) {
+				navigationbar.Dispose ();
+				navigationbar = null;
 			}
 		}
 	}

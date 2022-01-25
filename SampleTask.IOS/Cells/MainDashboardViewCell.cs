@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Foundation;
 using SampleTask.IOS.DataSources;
 using SampleTask.IOS.Delegates;

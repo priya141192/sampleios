@@ -24,7 +24,7 @@
                                 <rect key="frame" x="355" y="2" width="42" height="20.333333333333332"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lblOption"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.054357819260000002" green="0.99889463190000005" blue="0.94004172090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.1837958395" green="0.79949229960000001" blue="0.90095001460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-3S-e3G">

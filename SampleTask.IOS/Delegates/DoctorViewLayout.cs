@@ -7,7 +7,6 @@ namespace SampleTask.IOS.Delegates
 {
     public class DoctorViewLayout : UICollectionViewDelegateFlowLayout
     {
-        //public IOnTutorialPageScroll OnTutorialPageScrollDelegate;
         public DoctorViewLayout()
         {
         }

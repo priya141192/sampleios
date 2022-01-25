@@ -9,7 +9,7 @@ namespace SampleTask.IOS.Views
 {
     public partial class MainDashboardViewController : UIViewController
     {
-        List<DashboardEntityDto>  employees = new List<DashboardEntityDto>();
+        List<DashboardEntityDto>  dashboardList = new List<DashboardEntityDto>();
         public List<CustomerDto> CustomerList { get; set; } = new List<CustomerDto>();
         public List<DoctorDto> DoctorList { get; set; } = new List<DoctorDto>();
         public MainDashboardViewController() : base("MainDashboardViewController", null)
@@ -23,7 +23,7 @@ namespace SampleTask.IOS.Views
             {
                 new CustomerDto
                 {
-                    CustomerName = "Rohit",
+                    CustomerName = "Test user1",
                     CustomerAge = "29 Years",
                     TestName = "Dr. Nada Nada",
                     TestMon = "Test",
@@ -35,8 +35,19 @@ namespace SampleTask.IOS.Views
                 },
                 new CustomerDto
                 {
-                    CustomerName = "Priya",
-                    CustomerAge = "29 Years",
+                    CustomerName = "Test user2",
+                    CustomerAge = "30 Years",
+                    TestName = "Dr. Mohammed Arif",
+                    TestMon = "asdfghjkl qwertyui qwertyui",
+                    Days = "13 years ago",
+                    TestCategory = "Ayurved Medicine",
+                    TestReviews = "800 Reviews",
+                    CellType = CellType.Customer
+                },
+                new CustomerDto
+                {
+                    CustomerName = "Test user3",
+                    CustomerAge = "40 Years",
                     TestName = "Dr. Mohammed Arif",
                     TestMon = "asdfghjkl qwertyui qwertyui",
                     Days = "1 year ago",
@@ -98,7 +109,7 @@ namespace SampleTask.IOS.Views
                 },
             };
 
-            employees = new List<DashboardEntityDto>
+            dashboardList = new List<DashboardEntityDto>
             {
                 new DashboardEntityDto
                 {
@@ -111,7 +122,7 @@ namespace SampleTask.IOS.Views
             };
 
             maindashboardtable.RegisterNibForCellReuse(UINib.FromName("MainDashboardViewCell", null), "dashboardCell");
-            maindashboardtable.Source = new MainDashboardDataSource(employees);
+            maindashboardtable.Source = new MainDashboardDataSource(dashboardList);
             maindashboardtable.ContentInset = new UIEdgeInsets(40, 0, 0, 0);
         }
 
@@ -120,7 +131,7 @@ namespace SampleTask.IOS.Views
             base.ViewWillAppear(animated);
 
             // Initialize table
-            maindashboardtable.Source = new MainDashboardDataSource(employees);
+            maindashboardtable.Source = new MainDashboardDataSource(dashboardList);
             maindashboardtable.RowHeight = UITableView.AutomaticDimension;
             maindashboardtable.ReloadData();
         }
@@ -131,6 +142,7 @@ namespace SampleTask.IOS.Views
             if (maindashboardtable != null)
                 maindashboardtable.Frame = View.Bounds;
         }
+
 
         public override void DidReceiveMemoryWarning()
         {
